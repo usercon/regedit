@@ -1,0 +1,91 @@
+Windows Registry Editor Version 5.00
+
+
+; Command Prompt
+
+[HKEY_CLASSES_ROOT\Directory\shell\01MenuCmd]
+"MUIVerb"="Command Prompt"
+"Icon"="cmd.exe"
+"ExtendedSubCommandsKey"="Directory\\ContextMenus\\MenuCmd"
+
+[HKEY_CLASSES_ROOT\Directory\background\shell\01MenuCmd]
+"MUIVerb"="Command Prompt"
+"Icon"="cmd.exe"
+"ExtendedSubCommandsKey"="Directory\\ContextMenus\\MenuCmd"
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\MenuCmd\shell\open]
+"MUIVerb"="Command Prompt"
+"Icon"="cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\MenuCmd\shell\open\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\MenuCmd\shell\runas]
+"MUIVerb"="Command Prompt Elevated"
+"Icon"="cmd.exe"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\MenuCmd\shell\runas\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+
+; PowerShell
+
+[HKEY_CLASSES_ROOT\Directory\shell\02MenuPowerShell]
+"MUIVerb"="PowerShell Prompt"
+"Icon"="powershell.exe"
+"ExtendedSubCommandsKey"="Directory\\ContextMenus\\MenuPowerShell"
+
+[HKEY_CLASSES_ROOT\Directory\background\shell\02MenuPowerShell]
+"MUIVerb"="PowerShell Prompt"
+"Icon"="powershell.exe"
+"ExtendedSubCommandsKey"="Directory\\ContextMenus\\MenuPowerShell"
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\MenuPowerShell\shell\open]
+"MUIVerb"="PowerShell"
+"Icon"="powershell.exe"
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\MenuPowerShell\shell\open\command]
+@="powershell.exe -noexit -command Set-Location '%V'"
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\MenuPowerShell\shell\runas]
+"MUIVerb"="PowerShell Elevated"
+"Icon"="powershell.exe"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\MenuPowerShell\shell\runas\command]
+@="powershell.exe -noexit -command Set-Location '%V'"
+
+
+; Python
+
+[HKEY_CLASSES_ROOT\Directory\shell\03MenuPythonServer]
+"MUIVerb"="Python Server"
+"Icon"="python.exe"
+"ExtendedSubCommandsKey"="Directory\\ContextMenus\\MenuPythonServer"
+
+[HKEY_CLASSES_ROOT\Directory\background\shell\03MenuPythonServer]
+"MUIVerb"="Python Server"
+"Icon"="python.exe"
+"ExtendedSubCommandsKey"="Directory\\ContextMenus\\MenuPythonServer"
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\MenuPythonServer\shell\http8000]
+"MUIVerb"="HTTP Server 8000"
+"Icon"="python.exe"
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\MenuPythonServer\shell\http8000\command]
+@="cmd.exe /k \"cd /d %V && start \"\" http://localhost:8000/index.html & python -m http.server 8000\""
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\MenuPythonServer\shell\http3000]
+"MUIVerb"="HTTP Server 3000"
+"Icon"="python.exe"
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\MenuPythonServer\shell\http3000\command]
+@="cmd.exe /k \"cd /d %V && start \"\" http://localhost:3000/index.html & python -m http.server 3000\""
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\MenuPythonServer\shell\http9000]
+"MUIVerb"="HTTP Server 9000"
+"Icon"="python.exe"
+
+[HKEY_CLASSES_ROOT\Directory\ContextMenus\MenuPythonServer\shell\http9000\command]
+@="cmd.exe /k \"cd /d %V && start \"\" http://localhost:9000/index.html & python -m http.server 9000\""
